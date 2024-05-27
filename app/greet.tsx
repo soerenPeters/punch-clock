@@ -7,7 +7,8 @@ export default function Greet() {
   const [greeting, setGreeting] = useState('');
 
   useEffect(() => {
-    invoke<string>('greet', { name: 'Next.js' })
+    // setGreeting("Hello, World!");
+    invoke<string>('tauri_greet', { name: 'Next.js' })
       .then(result => setGreeting(result))
       .catch(console.error)
   }, [])
